@@ -6,20 +6,19 @@
   --muted:rgba(241,243,249,.72);
   --border:rgba(255,255,255,.10);
 
-  /* NU-ish vibe */
-  --purple:#4b2e83;
-  --purple2:#6d28d9;
-  --gold:#caa64b;
-  --gold2:#f59e0b;
+  --purple-main: #4b2e83;     /* Northwestern purple */
+  --purple-soft: #ede9f6;     /* light lavender */
+  --purple-border: #d6cdee;   /* soft border */
+  --purple-hover: #5f3aa6;
+}
+
 }
 
 body{
-  background:
-    radial-gradient(900px 500px at 15% -10%, rgba(75,46,131,.55), transparent 60%),
-    radial-gradient(900px 500px at 95% 0%, rgba(202,166,75,.25), transparent 55%),
-    radial-gradient(700px 400px at 70% 115%, rgba(59,130,246,.12), transparent 50%),
-    var(--bg);
+  background: #ffffff;
+  color: #1a1a1a;
 }
+
 
 .hero{
   position: relative;
@@ -42,12 +41,16 @@ body{
 }
 
 .card{
-  transition: transform .12s ease, border-color .12s ease;
+  background: #ffffff;
+  border: 2px solid var(--purple-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(75,46,131,.08);
 }
 
 .card:hover{
-  transform: translateY(-2px);
-  border-color: rgba(202,166,75,.22);
+  border-color: var(--purple-main);
+  box-shadow: 0 12px 32px rgba(75,46,131,.14);
 }
 
 .table tr:hover td{
