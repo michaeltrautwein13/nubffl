@@ -218,12 +218,12 @@ h2{margin:0 0 10px; font-size:16px}
 .footer{margin-top:14px; font-size:12px}
 
 .logo{
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   border-radius: 12px;
+  background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.06);
   padding: 6px;
 }
 
