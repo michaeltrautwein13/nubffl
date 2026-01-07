@@ -216,3 +216,14 @@ h2{margin:0 0 10px; font-size:16px}
 }
 
 .footer{margin-top:14px; font-size:12px}
+
+.logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  padding: 6px;
+}
+
