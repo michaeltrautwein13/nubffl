@@ -1,16 +1,16 @@
 {
   "teams": [
-    { "team_name": "Jamie Taco's Henchmen", "manager": "Michael Trautwein", "division": "—", "bio": "Sitting Commissioner. Passionate builder of league metrics, propaganda, and morale." },
-    { "team_name": "Doogs Doogs", "manager": "—", "division": "—", "bio": "The Silent One.  Although quiet, constantly lurking in the shadows of the waiver wire." },
-    { "team_name": "Bones Bones", "manager": "—", "division": "—", "bio": "Former regime leader. Eternal rival of Democracy. Still insists the Dark Ages were misunderstood." },
-    { "team_name": "Deeuhh Leee", "manager": "—", "division": "—", "bio": "The purest form of incompetence. Perpetually underperforming." },
-    { "team_name": "MULCYBUSHEATER24", "manager": "—", "division": "—", "bio": "The Coalition of Frauds. Big mouths, smaller results." },
-    { "team_name": "North Macedonia Yoseps", "manager": "—", "division": "—", "bio": "Bob Downey - Boom or bust performances, constant disappointment." },
-    { "team_name": "Cheddar Mankus Rack", "manager": "—", "division": "—", "bio": "The Prodigy they call him - although the big moment seems to be too big" },
-    { "team_name": "Boodrey", "manager": "—", "division": "—", "bio": "The Eternal Threat. Always in the mix despite quiet demeanor." },
-    { "team_name": "Jaes Bussy", "manager": "—", "division": "—", "bio": "The Wild Card. Constantly rotating rosters, to little avail." },
-    { "team_name": "Hernandez Hitmen", "manager": "—", "division": "—", "bio": "The Chief Extraterrestrial Officer. The public's watching eye, they say." },
-    { "team_name": "Biancheese", "manager": "—", "division": "—", "bio": "The Big Choke. Regular season warrior, terrified of the big game." },
-    { "team_name": "O Block Foenem", "manager": "—", "division": "—", "bio": "The Volatile Girth. Truly never know what you will get." }
+    { "team_name": "Jamie Taco's Henchmen", "manager": "Michael Trautwein", "division": "East", "bio": "Sitting Commissioner. Passionate builder of league metrics, propaganda, and morale." },
+    { "team_name": "Doogs Doogs", "manager": "Parker Hanks", "division": "West", "bio": "The Silent One.  Although quiet, constantly lurking in the shadows of the waiver wire." },
+    { "team_name": "Bones Bones", "manager": "Jay Beshears", "division": "East", "bio": "Former regime leader. Eternal rival of Democracy. Still insists the Dark Ages were misunderstood." },
+    { "team_name": "Deeuhh Leee", "manager": "Tommy D'Alise, Alex Erro", "division": "West", "bio": "The purest form of incompetence. Perpetually underperforming." },
+    { "team_name": "MULCYBUSHEATER24", "manager": "Jack Pagliarini, David Dunn", "division": "East", "bio": "The Coalition of Frauds. Big mouths, smaller results." },
+    { "team_name": "North Macedonia Yoseps", "manager": "Anthony Calarco", "division": "West", "bio": "Bob Downey - Boom or bust performances, constant disappointment." },
+    { "team_name": "Cheddar Mankus Rack", "manager": "Shawn Goosenberg", "division": "West", "bio": "The Prodigy they call him - although the big moment seems to be too big" },
+    { "team_name": "Boodrey", "manager": "Charlie Bourbon", "division": "West", "bio": "The Eternal Threat. Always in the mix despite quiet demeanor." },
+    { "team_name": "Jaes Bussy", "manager": "Evan Minarovic, Hank Christie", "division": "East", "bio": "The Wild Card. Constantly rotating rosters, to little avail." },
+    { "team_name": "Hernandez Hitmen", "manager": "Tony Livermore", "division": "East", "bio": "The Chief Extraterrestrial Officer. The public's watching eye, they say." },
+    { "team_name": "Biancheese", "manager": "Vince Bianchina", "division": "West", "bio": "The Big Choke. Regular season warrior, terrified of the big game." },
+    { "team_name": "O Block Foenem", "manager": "Declan Floyd, Mike Doherty", "division": "East", "bio": "The Volatile Girth. Truly never know what you will get." }
   ]
 }
