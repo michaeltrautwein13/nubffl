@@ -140,21 +140,31 @@
     let headers = [];
 
     function buildMetricDropdown(){
-      const allowed = ["wsos","fsi+","wlr","cs","wpi"];
-      const metricSel = document.getElementById("metric");
-      metricSel.innerHTML = "";
+  const metricSel = document.getElementById("metric");
+  metricSel.innerHTML = "";
+  const allowed = ["wpi","wsos","fsi+","wlr","cs"];
+  const labelMap = {
+    "wpi": "WPI",
+    "wsos": "WSoS",
+    "fsi+": "FSI+",
+    "wlr": "WLR",
+    "cs": "CS"
+  };
+  const metrics = allowed.filter(m => headers.includes(m));
 
-      // All columns except team are metrics
-      const metrics = headers.filter(h => h !== "team");
-      // Default preferences if present
-      const preferred = ["wpi","msi","ssa","wsos","ewp","wlr","hybrid_pa","hybridpa"];
-      metrics.sort((a,b)=>{
-        const ai = preferred.indexOf(a), bi = preferred.indexOf(b);
-        if (ai === -1 && bi === -1) return a.localeCompare(b);
-        if (ai === -1) return 1;
-        if (bi === -1) return -1;
-        return ai - bi;
-      });
+  metrics.forEach(m => {
+    const opt = document.createElement("option");
+    opt.value = m;
+    opt.textContent = labelMap[m];
+    metricSel.appendChild(opt);
+  });
+
+  // Default selection
+  if (metrics.includes("wpi")) {
+    metricSel.value = "wpi";
+  }
+}
+
 
       metrics.forEach(m=>{
         const opt = document.createElement("option");
