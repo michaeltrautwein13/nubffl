@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NUBFFL — History</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body data-page="history">
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="badge"></div>
+        <div>
+          <div class="brand-title">NU Bags Fantasy Football League</div>
+          <div class="brand-sub">History • The Archives of Gyeaeia</div>
+        </div>
+      </div>
+      <div class="links">
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="power-rankings.html">Power</a>
+        <a class="link" href="standings.html">Standings</a>
+        <a class="link" href="history.html">History</a>
+        <a class="link" href="teams.html">Teams</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-title">
+        <h1>League History</h1>
+        <div class="pill">Seasons: <b id="hRange">—</b></div>
+      </div>
+      <p class="muted">
+        Champions, runner-ups, and artifacts from the era of myth. The truth is written here (and sometimes edited).
+      </p>
+    </section>
+
+    <div id="errorBox" class="error" style="display:none;"></div>
+
+    <section class="card">
+      <h2 class="section-title">Champions</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Champion</th>
+            <th>Runner-up</th>
+            <th>Final</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody id="champBody"></tbody>
+      </table>
+    </section>
+
+    <section class="grid" id="awards" style="margin-top:12px;"></section>
+
+    <footer class="footer muted">
+      Update by editing <code>data/history.json</code>.
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
