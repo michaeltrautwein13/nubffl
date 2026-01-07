@@ -140,6 +140,7 @@
     let headers = [];
 
     function buildMetricDropdown(){
+      const allowed = ["wsos","fsi+","wlr","cs","wpi"];
       const metricSel = document.getElementById("metric");
       metricSel.innerHTML = "";
 
