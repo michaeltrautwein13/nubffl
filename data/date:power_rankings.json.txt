@@ -1,0 +1,18 @@
+{
+  "week": 1,
+  "last_updated": "2026-01-07",
+  "rankings": [
+    { "rank": 1, "team": "Jamie Taco's Henchmen", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "The Commissioner’s reign continues. The metrics whisper… but do they lie?" },
+    { "rank": 2, "team": "Biancheese", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "Born for the regular season. Will the postseason demons return?" },
+    { "rank": 3, "team": "Cheddar Mankus Rack", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "A points-for avalanche is always possible. The league prays it isn’t today." },
+    { "rank": 4, "team": "Bones Bones", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "The old regime still lurks. Rivalries never die—they just reload." },
+    { "rank": 5, "team": "Boodrey", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "Unpredictable. Dangerous. Capable of brilliance and/or self-sabotage." },
+    { "rank": 6, "team": "Hernandez Hitmen", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "A franchise that wins ugly and doesn’t apologize for it." },
+    { "rank": 7, "team": "North Macedonia Yoseps", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "Quiet competency. The kind that ends your season without warning." },
+    { "rank": 8, "team": "Doogs Doogs", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "Somehow always in the mix. Somehow always stressful." },
+    { "rank": 9, "team": "Deeuhh Leee", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "If chaos were a strategy, this would be the textbook." },
+    { "rank": 10, "team": "Jaes Bussy", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "A wild card with trade fingers that itch at all times." },
+    { "rank": 11, "team": "MULCYBUSHEATER24", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "A riddle wrapped in a mystery wrapped in waiver claims." },
+    { "rank": 12, "team": "O Block Foenem", "delta": 0, "record": "0-0", "points_for": 0, "points_against": 0, "streak": "", "blurb": "The basement is temporary… unless it isn’t. The season begins now." }
+  ]
+}
