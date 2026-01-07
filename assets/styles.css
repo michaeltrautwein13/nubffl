@@ -1,0 +1,162 @@
+:root{
+  --bg:#0b0f19;
+  --card:#121a2b;
+  --panel:#0c1220;
+  --text:#e8eaf0;
+  --muted:rgba(232,234,240,.72);
+  --border:rgba(255,255,255,.10);
+  --purple:#6d28d9;
+  --gold:#f59e0b;
+  --blue:#3b82f6;
+  --red:#ef4444;
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 18% -10%, rgba(109,40,217,.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(245,158,11,.18), transparent 55%),
+    var(--bg);
+}
+
+a{color:inherit;text-decoration:none}
+code{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  padding:2px 6px;
+  border-radius:8px;
+}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,25,.72);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.nav-inner{
+  max-width:1050px;
+  margin:0 auto;
+  padding:12px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.brand{display:flex; align-items:center; gap:10px}
+.badge{
+  width:34px;height:34px;border-radius:10px;
+  background: linear-gradient(135deg, rgba(109,40,217,1), rgba(245,158,11,1));
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.brand-title{font-weight:900; letter-spacing:.2px}
+.brand-sub{font-size:12px; color:var(--muted); margin-top:2px}
+
+.links{display:flex; gap:8px; flex-wrap:wrap}
+.link{
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid transparent;
+  color:rgba(232,234,240,.9);
+}
+.link:hover{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.08)}
+.link.active{background:rgba(109,40,217,.16); border-color:rgba(109,40,217,.35)}
+
+.container{max-width:1050px; margin:0 auto; padding:18px 14px 36px}
+
+.hero{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(18,26,43,.88), rgba(12,18,32,.88));
+  padding:16px;
+  box-shadow:0 12px 40px rgba(0,0,0,.25);
+}
+.hero-title{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap}
+h1{margin:0;font-size:22px}
+h2{margin:0 0 10px; font-size:16px}
+.section-title{margin:0 0 12px; font-size:16px}
+.muted{color:var(--muted)}
+
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.card{
+  margin-top:12px;
+  background: rgba(18,26,43,.90);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:14px;
+  box-shadow:0 8px 28px rgba(0,0,0,.22);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+.stack{display:flex; flex-direction:column; gap:10px; margin-top:12px}
+
+.rank-row{
+  background: rgba(12,18,32,.92);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding:12px;
+}
+.rank-top{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
+.rank-name{font-weight:900}
+.rank-meta{margin-top:6px; display:flex; gap:10px; flex-wrap:wrap; font-size:12px; color:var(--muted)}
+.rank-notes{margin-top:8px; white-space:pre-wrap; line-height:1.35}
+
+.chip{
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+}
+.delta.up{border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.10)}
+.delta.down{border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.10)}
+.delta.flat{border-color: rgba(59,130,246,.35); background: rgba(59,130,246,.10)}
+
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+}
+.table th,.table td{
+  text-align:left;
+  padding:10px 10px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:13px;
+}
+.table th{background:rgba(255,255,255,.06); color:rgba(232,234,240,.9)}
+.table tr:last-child td{border-bottom:none}
+
+.error{
+  margin-top:12px;
+  padding:12px;
+  border-radius:14px;
+  background: rgba(239,68,68,.10);
+  border:1px solid rgba(239,68,68,.35);
+  color:#fecaca;
+}
+
+.footer{margin-top:14px; font-size:12px}

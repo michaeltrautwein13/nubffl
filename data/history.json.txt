@@ -1,0 +1,14 @@
+{
+  "seasons": "2022–2025",
+  "champions": [
+    { "year": 2025, "champion": "—", "runner_up": "—", "score": "—", "note": "The season the league truly woke up. Fill in the legend." },
+    { "year": 2024, "champion": "—", "runner_up": "—", "score": "—", "note": "The revolution era. Order replaced the fog." },
+    { "year": 2023, "champion": "—", "runner_up": "—", "score": "—", "note": "Late-stage Dark Ages of Gyeaeia energy." },
+    { "year": 2022, "champion": "—", "runner_up": "—", "score": "—", "note": "The founding year. Innocence before the lore." }
+  ],
+  "awards": [
+    { "label": "Most Points For (Season)", "winner": "—", "detail": "Total PF: —", "year": "2025" },
+    { "label": "Highest Single-Week Score", "winner": "—", "detail": "Week — • — points", "year": "All-time" },
+    { "label": "Sacko / Last Place", "winner": "—", "detail": "Punishment: —", "year": "2025" }
+  ]
+}
