@@ -74,25 +74,88 @@ async function renderStandings(){
   document.getElementById("sUpdated").textContent = s.last_updated || "—";
 
   const tbody = document.getElementById("standingsBody");
-  tbody.innerHTML = "";
+  const dropdowns = Array.from(document.querySelectorAll(".sort-dd"));
 
-  (s.teams || []).forEach((t, idx)=>{
-    // Support both Championship key styles just in case
-    const champsRaw = t.Championships ?? t.championships ?? 0;
-    const champs = Number(champsRaw);
+  // Keep original order so "none" can revert
+  const original = (s.teams || []).map((t, i) => ({ ...t, __idx: i }));
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${idx + 1}</td>
-      <td><b>${t.team}</b></td>
-      <td>${t.record || "—"}</td>
-      <td>${t.points_for != null ? Number(t.points_for).toFixed(1) : "—"}</td>
-      <td>${t.points_against != null ? Number(t.points_against).toFixed(1) : "—"}</td>
-      <td class="champ-cell">${Number.isFinite(champs) ? champs : "—"}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
+  let current = original.slice(); // currently displayed order
+
+  function recordValue(rec){
+    // Convert "33-23" into win pct (or net wins). Win pct is safest.
+    if(!rec) return null;
+    const m = String(rec).match(/(\d+)\s*-\s*(\d+)/);
+    if(!m) return null;
+    const w = Number(m[1]), l = Number(m[2]);
+    const games = w + l;
+    if(!games) return null;
+    return w / games; // win percentage
+  }
+
+  function toNum(v){
+    const n = Number(String(v ?? "").replace(/[^0-9.\-]/g, ""));
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function getComparable(t, key){
+    if(key === "rank") return t.__idx;               // default ranking order
+    if(key === "team") return (t.team || "").toLowerCase();
+
+    if(key === "record") return recordValue(t.record);
+
+    if(key === "points_for") return toNum(t.points_for);
+    if(key === "points_against") return toNum(t.points_against);
+
+    // EXACT key: "Championships"
+    if(key === "Championships") return toNum(t.Championships ?? 0);
+
+    // fallback if you add more later
+    return t[key];
+  }
+
+  function renderRows(list){
+    tbody.innerHTML = "";
+
+    list.forEach((t, idx)=>{
+      const champsRaw = t.Championships ?? 0;
+      const champs = Number(champsRaw);
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${idx + 1}</td>
+        <td><b>${t.team}</b></td>
+        <td>${t.record || "—"}</td>
+        <td>${t.points_for != null ? Number(t.points_for).toFixed(1) : "—"}</td>
+        <td>${t.points_against != null ? Number(t.points_against).toFixed(1) : "—"}</td>
+        <td class="champ-cell">${Number.isFinite(champs) ? champs : "—"}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function applySort(key, dir){
+    if(dir === "none"){
+      current = original.slice();
+      renderRows(current);
+      return;
+    }
+
+    const factor = dir === "asc" ? 1 : -1;
+
+    current = original.slice().sort((a, b) => {
+      const av = getComparable(a, key);
+      const bv = getComparable(b, key);
+
+      // Nulls always bottom
+      const aNull = (av === null || av === undefined || av === "");
+      const bNull = (bv === null || bv === undefined || bv === "");
+      if(aNull && bNull) return 0;
+      if(aNull) return 1;
+      if(bNull) return -1;
+
+      // String compare
+      if(typeof av === "string" || typeof bv === "string"){
+        return String(av).localeCompare(String(bv))
 
 async function renderHistory(){
   const h = await loadJSON("data/history.json");
