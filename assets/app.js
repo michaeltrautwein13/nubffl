@@ -32,23 +32,31 @@ async function renderHomepageChampion(){
   const champs = Array.isArray(h.champions) ? h.champions : [];
   if(champs.length === 0) return;
 
-  // Always pick most recent by year (not array order)
+  // Pick most recent champion
   const c = champs.slice().sort((a,b) => Number(a.year) - Number(b.year)).pop();
 
-  // Compact layout that fits above hero nicely
   wrap.innerHTML = `
-    <section class="champ-card" style="margin-top:14px; padding:14px;">
+    <section class="champ-card champ-card--home">
       <div class="champ-top">
-        <div>
+        <div class="champ-left">
           <div class="champ-title">Defending Champion</div>
-          <div class="champ-name" style="font-size:20px;">${esc(c.champion || "—")}</div>
-          <div class="champ-sub" style="font-size:13px;">
-            ${esc(c.year || "—")}
+          <div class="champ-name">${esc(c.champion)}</div>
+
+          <div class="champ-sub">
+            ${c.year}
             ${c.runner_up ? ` • Runner-up: <b>${esc(c.runner_up)}</b>` : ""}
           </div>
-          ${c.note ? `<div class="muted" style="margin-top:6px;font-size:13px;line-height:1.35;">${esc(c.note)}</div>` : ""}
+
+          ${c.note ? `<div class="champ-note muted">${esc(c.note)}</div>` : ""}
         </div>
-        <div class="trophy" style="width:42px;height:42px;border-radius:12px;font-size:20px;">🏆</div>
+
+        <div class="champ-logo-wrap">
+          <img
+            src="assets/champ_logo.png"
+            alt="2025 NUBFFL Championship Logo"
+            class="champ-logo-img"
+          />
+        </div>
       </div>
     </section>
   `;
