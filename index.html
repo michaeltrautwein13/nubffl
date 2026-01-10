@@ -81,5 +81,86 @@
   </main>
 
   <script src="assets/app.js"></script>
+
+  <!-- Champ-card styles (scoped so you don't have to touch styles.css) -->
+  <style>
+    /* Center + amplify champion card */
+    .champ-card--home .champ-top{
+      justify-content: center;
+      text-align: center;
+      gap: 18px;
+    }
+
+    .champ-card--home .champ-left{
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .champ-card--home .champ-title{
+      font-size: 12px;
+      letter-spacing: .18em;
+    }
+
+    .champ-card--home .champ-name{
+      font-size: 30px;
+      margin-top: 8px;
+      letter-spacing: .01em;
+    }
+
+    /* Glow pulse for champ name */
+    .champ-glow{
+      animation: champPulse 2.2s ease-in-out infinite;
+      text-shadow:
+        0 0 0 rgba(75,46,131,0),
+        0 0 0 rgba(75,46,131,0);
+    }
+
+    @keyframes champPulse{
+      0%, 100%{
+        text-shadow:
+          0 0 0 rgba(75,46,131,0),
+          0 0 0 rgba(75,46,131,0);
+        transform: translateZ(0);
+      }
+      50%{
+        text-shadow:
+          0 0 14px rgba(75,46,131,.35),
+          0 0 28px rgba(75,46,131,.22);
+      }
+    }
+
+    .champ-card--home .champ-sub{
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .champ-card--home .champ-note{
+      margin-top: 8px;
+      font-size: 14px;
+      max-width: 720px;
+    }
+
+    .champ-card--home .champ-logo-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+    }
+
+    .champ-card--home .champ-logo-img{
+      width: 130px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+    }
+
+    @media (max-width: 700px){
+      .champ-card--home .champ-name{ font-size: 26px; }
+      .champ-card--home .champ-logo-img{ width: 110px; }
+    }
+  </style>
 </body>
 </html>
