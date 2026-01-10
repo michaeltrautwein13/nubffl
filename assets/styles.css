@@ -557,35 +557,30 @@ code{
 /* =========================
    CHAMPIONSHIP LOGO (HOMEPAGE)
 ========================= */
-
+/* Tighten homepage championship card */
 .champ-card--home{
-  margin-top: 16px;
-  padding: 16px;
+  padding: 12px 16px;
 }
 
-.champ-logo-wrap{
-  width: 86px;
-  height: 86px;
-  display: flex;
+.champ-card--home .champ-top{
   align-items: center;
-  justify-content: center;
 }
 
-.champ-logo-img{
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.champ-card--home .champ-title{
+  font-size: 11px;
+  letter-spacing: .14em;
 }
 
-/* Mobile tuning */
-@media (max-width: 700px){
-  .hero-league-logo{
-    width: 38px;
-    height: 38px;
-  }
+.champ-card--home .champ-name{
+  font-size: 19px;
+}
 
-  .champ-logo-wrap{
-    width: 72px;
-    height: 72px;
-  }
+.champ-card--home .champ-sub{
+  font-size: 13px;
+}
+
+.champ-note{
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.3;
 }
