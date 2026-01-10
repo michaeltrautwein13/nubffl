@@ -266,6 +266,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
   const page = document.body.getAttribute("data-page");
 
   try{
+    if(page === "index") await renderHomepageChampion();
     if(page === "power") await renderPower();
     if(page === "standings") await renderStandings();
     if(page === "history") await renderHistory();
