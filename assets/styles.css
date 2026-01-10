@@ -1,232 +1,410 @@
-:root{
-  --bg:#070a12;
-  --card:#0f1730;
-  --panel:#0b1022;
-  --text:#f1f3f9;
-  --muted:rgba(241,243,249,.72);
-  --border:rgba(255,255,255,.10);
+/* =========================
+   NUBFFL Styles (White + Purple Theme)
+   Replace entire assets/styles.css with this file
+   ========================= */
 
+:root{
   --purple-main: #4b2e83;     /* Northwestern purple */
+  --purple-hover: #5f3aa6;
   --purple-soft: #ede9f6;     /* light lavender */
   --purple-border: #d6cdee;   /* soft border */
-  --purple-hover: #5f3aa6;
+  --text: #161616;
+  --muted: rgba(0,0,0,.62);
+  --shadow: 0 10px 28px rgba(75,46,131,.10);
 }
 
-}
+*{ box-sizing:border-box; }
 
-body{
-  background: #ffffff;
-  color: #1a1a1a;
-}
-
-
-.hero{
-  position: relative;
-  overflow: hidden;
-}
-
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background:
-    linear-gradient(135deg, rgba(75,46,131,.45), rgba(202,166,75,.18));
-  filter: blur(18px);
-  opacity:.55;
-  pointer-events:none;
-}
-
-.badge{
-  background: linear-gradient(135deg, var(--purple2), var(--gold2));
-}
-
-.card{
-  background: #ffffff;
-  border: 2px solid var(--purple-border);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 24px rgba(75,46,131,.08);
-}
-
-.card:hover{
-  border-color: var(--purple-main);
-  box-shadow: 0 12px 32px rgba(75,46,131,.14);
-}
-
-.table tr:hover td{
-  background: rgba(255,255,255,.03);
-}
-
-:root{
-  --bg:#0b0f19;
-  --card:#121a2b;
-  --panel:#0c1220;
-  --text:#e8eaf0;
-  --muted:rgba(232,234,240,.72);
-  --border:rgba(255,255,255,.10);
-  --purple:#6d28d9;
-  --gold:#f59e0b;
-  --blue:#3b82f6;
-  --red:#ef4444;
-  --radius:16px;
-}
-
-*{box-sizing:border-box}
-body{
+html, body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  padding:0;
+}
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:#ffffff;
   color:var(--text);
-  background:
-    radial-gradient(900px 500px at 18% -10%, rgba(109,40,217,.35), transparent 60%),
-    radial-gradient(900px 500px at 90% 0%, rgba(245,158,11,.18), transparent 55%),
-    var(--bg);
 }
 
-a{color:inherit;text-decoration:none}
-code{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-  padding:2px 6px;
-  border-radius:8px;
+/* Layout container */
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
 }
 
+/* Muted text helper */
+.muted{ color: var(--muted); }
+
+/* =========================
+   Navbar
+   ========================= */
 .nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  backdrop-filter: blur(10px);
-  background: rgba(11,15,25,.72);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background:#ffffff;
+  border-bottom:2px solid var(--purple-border);
 }
+
 .nav-inner{
-  max-width:1050px;
-  margin:0 auto;
-  padding:12px 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 18px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
+  gap: 16px;
 }
 
-.brand{display:flex; align-items:center; gap:10px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 260px;
+}
+
+.brand-title{
+  font-weight: 950;
+  letter-spacing: .02em;
+  color: var(--purple-main);
+}
+
+.brand-sub{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* If you still have a badge div on other pages */
 .badge{
-  width:34px;height:34px;border-radius:10px;
-  background: linear-gradient(135deg, rgba(109,40,217,1), rgba(245,158,11,1));
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-.brand-title{font-weight:900; letter-spacing:.2px}
-.brand-sub{font-size:12px; color:var(--muted); margin-top:2px}
-
-.links{display:flex; gap:8px; flex-wrap:wrap}
-.link{
-  padding:8px 10px;
-  border-radius:12px;
-  border:1px solid transparent;
-  color:rgba(232,234,240,.9);
-}
-.link:hover{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.08)}
-.link.active{background:rgba(109,40,217,.16); border-color:rgba(109,40,217,.35)}
-
-.container{max-width:1050px; margin:0 auto; padding:18px 14px 36px}
-
-.hero{
-  border:1px solid rgba(255,255,255,.08);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(18,26,43,.88), rgba(12,18,32,.88));
-  padding:16px;
-  box-shadow:0 12px 40px rgba(0,0,0,.25);
-}
-.hero-title{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap}
-h1{margin:0;font-size:22px}
-h2{margin:0 0 10px; font-size:16px}
-.section-title{margin:0 0 12px; font-size:16px}
-.muted{color:var(--muted)}
-
-.pill{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(75,46,131,.08);
+  border: 1px solid rgba(75,46,131,.18);
 }
 
-.card{
-  margin-top:12px;
-  background: rgba(18,26,43,.90);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius: var(--radius);
-  padding:14px;
-  box-shadow:0 8px 28px rgba(0,0,0,.22);
-}
-
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap:12px;
-  margin-top:12px;
-}
-
-.stack{display:flex; flex-direction:column; gap:10px; margin-top:12px}
-
-.rank-row{
-  background: rgba(12,18,32,.92);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius: 14px;
-  padding:12px;
-}
-.rank-top{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
-.rank-name{font-weight:900}
-.rank-meta{margin-top:6px; display:flex; gap:10px; flex-wrap:wrap; font-size:12px; color:var(--muted)}
-.rank-notes{margin-top:8px; white-space:pre-wrap; line-height:1.35}
-
-.chip{
-  font-size:12px;
-  padding:4px 8px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-}
-.delta.up{border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.10)}
-.delta.down{border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.10)}
-.delta.flat{border-color: rgba(59,130,246,.35); background: rgba(59,130,246,.10)}
-
-.table{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0;
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.08);
-}
-.table th,.table td{
-  text-align:left;
-  padding:10px 10px;
-  border-bottom:1px solid rgba(255,255,255,.06);
-  font-size:13px;
-}
-.table th{background:rgba(255,255,255,.06); color:rgba(232,234,240,.9)}
-.table tr:last-child td{border-bottom:none}
-
-.error{
-  margin-top:12px;
-  padding:12px;
-  border-radius:14px;
-  background: rgba(239,68,68,.10);
-  border:1px solid rgba(239,68,68,.35);
-  color:#fecaca;
-}
-
-.footer{margin-top:14px; font-size:12px}
-
+/* Logo image badge */
 .logo{
   width: 42px;
   height: 42px;
   object-fit: contain;
   border-radius: 12px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(75,46,131,.08);
+  border: 1px solid rgba(75,46,131,.18);
   padding: 6px;
+  display:block;
 }
 
+.links{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.link{
+  text-decoration:none;
+  color: var(--purple-main);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.link:hover{
+  color: var(--purple-hover);
+  background: var(--purple-soft);
+  border-color: var(--purple-border);
+}
+
+/* Optional active link styling if you add .active in HTML/JS */
+.link.active{
+  background: rgba(75,46,131,.10);
+  border-color: rgba(75,46,131,.22);
+}
+
+/* =========================
+   Hero
+   ========================= */
+.hero{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 2px solid var(--purple-border);
+  box-shadow: var(--shadow);
+}
+
+.hero-title{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero h1{
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+  color: #111;
+}
+
+/* Pills */
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--purple-border);
+  background: var(--purple-soft);
+  color: var(--purple-main);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* Inputs (works with your analytics inline styles too) */
+.input{
+  padding:10px 12px;
+  border-radius:12px;
+  background:#fff;
+  border: 2px solid var(--purple-border);
+  color: var(--text);
+  outline:none;
+}
+
+.input:focus{
+  border-color: rgba(75,46,131,.55);
+  box-shadow: 0 0 0 4px rgba(75,46,131,.10);
+}
+
+/* =========================
+   Cards / Sections
+   ========================= */
+.card{
+  background: #ffffff;
+  border: 2px solid var(--purple-border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.card:hover{
+  border-color: rgba(75,46,131,.35);
+  box-shadow: 0 14px 34px rgba(75,46,131,.14);
+}
+
+.section-title{
+  margin: 0 0 10px 0;
+  color: var(--purple-main);
+  font-weight: 950;
+  letter-spacing: .02em;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:4px;
+  background: var(--purple-main);
+  border-radius:4px;
+  margin-top:6px;
+}
+
+/* Footer */
+.footer{
+  margin-top: 18px;
+  padding: 14px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Error box */
+.error{
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px solid rgba(255,0,0,.18);
+  background: rgba(255,0,0,.04);
+  color: rgba(160,0,0,.95);
+  font-weight: 700;
+}
+
+/* =========================
+   Tables
+   ========================= */
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  border-radius: 16px;
+}
+
+.table th{
+  text-align:left;
+  padding: 10px 12px;
+  background: var(--purple-soft);
+  color: var(--purple-main);
+  font-weight: 900;
+  border-bottom: 2px solid var(--purple-border);
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.table td{
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.table tr:hover td{
+  background: #faf8ff;
+}
+
+/* Division row striping (Standings) */
+.table tr.div-east td{ background: #fbf9ff; }
+.table tr.div-west td{ background: #ffffff; }
+
+.table tr.div-east:hover td,
+.table tr.div-west:hover td{
+  background: #f6f0ff;
+}
+
+/* Division pill */
+.div-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(75,46,131,.18);
+  background: rgba(75,46,131,.08);
+  color: var(--purple-main);
+  font-weight: 900;
+  font-size: 11px;
+}
+
+/* =========================
+   Champion Card (Gradient)
+   ========================= */
+.champ-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 18px;
+  border: 2px solid rgba(75,46,131,.22);
+  background:
+    radial-gradient(900px 260px at -10% 0%, rgba(75,46,131,.20), transparent 55%),
+    radial-gradient(700px 260px at 110% 0%, rgba(202,166,75,.18), transparent 55%),
+    linear-gradient(135deg, rgba(75,46,131,.10), rgba(255,255,255,1));
+  box-shadow: 0 14px 40px rgba(75,46,131,.14);
+}
+
+.champ-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: linear-gradient(135deg, rgba(75,46,131,.35), rgba(202,166,75,.22));
+  opacity:.35;
+  filter: blur(18px);
+  pointer-events:none;
+}
+
+.champ-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  position:relative;
+  z-index:1;
+}
+
+.champ-title{
+  color: var(--purple-main);
+  font-weight: 950;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.champ-name{
+  font-size: 22px;
+  font-weight: 950;
+  color: #121212;
+  margin-top: 6px;
+}
+
+.champ-sub{
+  color: rgba(0,0,0,.62);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.trophy{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(75,46,131,.10);
+  border: 1px solid rgba(75,46,131,.22);
+  font-size: 22px;
+}
+
+/* =========================
+   Purple Progress Bars
+   ========================= */
+.bar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.bar-label{
+  width: 72px;
+  font-size: 12px;
+  font-weight: 950;
+  color: var(--purple-main);
+  letter-spacing:.02em;
+}
+
+.bar-track{
+  flex:1;
+  min-width: 180px;
+  height: 10px;
+  border-radius: 999px;
+  background: #f1eef9;
+  border: 1px solid rgba(75,46,131,.16);
+  overflow:hidden;
+}
+
+.bar-fill{
+  height:100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4b2e83, #6d28d9);
+}
+
+.bar-value{
+  width: 56px;
+  text-align:right;
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: rgba(0,0,0,.72);
+}
+
+/* Utility */
+code{
+  background: rgba(75,46,131,.08);
+  border: 1px solid rgba(75,46,131,.16);
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+}
