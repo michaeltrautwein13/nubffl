@@ -77,13 +77,18 @@ async function renderStandings(){
   tbody.innerHTML = "";
 
   (s.teams || []).forEach((t, idx)=>{
+    // Support both Championship key styles just in case
+    const champsRaw = t.Championships ?? t.championships ?? 0;
+    const champs = Number(champsRaw);
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${idx+1}</td>
+      <td>${idx + 1}</td>
       <td><b>${t.team}</b></td>
       <td>${t.record || "—"}</td>
       <td>${t.points_for != null ? Number(t.points_for).toFixed(1) : "—"}</td>
       <td>${t.points_against != null ? Number(t.points_against).toFixed(1) : "—"}</td>
+      <td class="champ-cell">${Number.isFinite(champs) ? champs : "—"}</td>
     `;
     tbody.appendChild(tr);
   });
