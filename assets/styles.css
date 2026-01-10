@@ -1,6 +1,5 @@
 /* =========================
    NUBFFL Styles (White + Purple Theme)
-   Replace entire assets/styles.css with this file
    ========================= */
 
 :root{
@@ -254,6 +253,7 @@ body{
   border-bottom: 2px solid var(--purple-border);
   font-size: 12px;
   letter-spacing: .02em;
+  white-space: nowrap;
 }
 
 .table td{
@@ -273,6 +273,17 @@ body{
 .table tr.div-east:hover td,
 .table tr.div-west:hover td{
   background: #f6f0ff;
+}
+
+/* Center last column header & values (Championships) */
+.table th:last-child{
+  text-align: center;
+}
+
+.champ-cell{
+  text-align: center;
+  font-weight: 900;
+  color: var(--purple-main);
 }
 
 /* Division pill */
@@ -409,11 +420,9 @@ code{
   font-size: 12px;
 }
 
-@media (max-width: 700px) {
-  th.champ-header {
-    font-size: 12px;
-  }
-}
+/* =========================
+   Standings: sort dropdowns
+   ========================= */
 .sort-dd{
   margin-left: 8px;
   padding: 6px 8px;
@@ -425,10 +434,6 @@ code{
   font-size: 12px;
 }
 
-th{
-  white-space: nowrap;
-}
-
 @media (max-width: 800px){
   .sort-dd{
     margin-left: 6px;
@@ -436,27 +441,24 @@ th{
     font-size: 11px;
   }
 }
-/* =========================
-   POWER RANKINGS UI (restore cards/chips)
-   Paste at bottom of assets/styles.css
-========================= */
 
+/* =========================
+   POWER RANKINGS UI
+   ========================= */
 .stack{
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Each ranking becomes a card */
 .rank-row{
   background: #fff;
-  border: 1px solid rgba(75,46,131,0.18);
-  border-radius: 16px;
-  padding: 14px 14px;
-  box-shadow: 0 10px 24px rgba(17,24,39,0.06);
+  border: 2px solid var(--purple-border);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: var(--shadow);
 }
 
-/* Header row: name left, chips right */
 .rank-top{
   display: flex;
   align-items: flex-start;
@@ -467,31 +469,28 @@ th{
 }
 
 .rank-name{
-  font-weight: 900;
+  font-weight: 950;
   font-size: 16px;
   color: #111827;
   line-height: 1.2;
 }
 
-/* Subline meta */
 .rank-meta{
   font-size: 13px;
-  color: #6b7280;
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
-/* Notes paragraph */
 .rank-notes{
   font-size: 14px;
   line-height: 1.35;
   color: #111827;
-  background: rgba(75,46,131,0.04);
-  border: 1px solid rgba(75,46,131,0.10);
+  background: rgba(75,46,131,.04);
+  border: 1px solid rgba(75,46,131,.10);
   border-radius: 12px;
   padding: 10px 12px;
 }
 
-/* Chips */
 .chip{
   display: inline-flex;
   align-items: center;
@@ -501,21 +500,20 @@ th{
   background: rgba(17,24,39,0.04);
   border: 1px solid rgba(17,24,39,0.10);
   color: #111827;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 12px;
   white-space: nowrap;
 }
 
-/* Delta chip variants */
 .chip.delta{
-  border-color: rgba(75,46,131,0.18);
-  background: rgba(75,46,131,0.08);
-  color: #4b2e83;
+  border-color: rgba(75,46,131,.18);
+  background: rgba(75,46,131,.08);
+  color: var(--purple-main);
 }
 
 .chip.delta.up{
-  background: rgba(75,46,131,0.10);
-  color: #4b2e83;
+  background: rgba(75,46,131,.10);
+  color: var(--purple-main);
 }
 
 .chip.delta.down{
@@ -530,9 +528,9 @@ th{
   color: #6b7280;
 }
 
-/* Make it breathe on mobile */
 @media (max-width: 800px){
   .rank-row{ padding: 12px; }
   .rank-name{ font-size: 15px; }
   .rank-notes{ font-size: 13px; }
 }
+
