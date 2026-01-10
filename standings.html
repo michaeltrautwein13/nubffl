@@ -40,19 +40,64 @@
 
     <section class="card">
       <table class="table">
-      <thead>
+     <thead>
   <tr>
-    <th style="width:60px;">#</th>
-    <th>Team</th>
-    <th>Record</th>
-    <th>PF</th>
-    <th>PA</th>
-    <th class="champ-header" style="text-align:center;">Championships</th>
+    <th style="width:60px;">
+      # 
+      <select class="sort-dd" data-key="rank">
+        <option value="none">—</option>
+        <option value="asc">Asc</option>
+        <option value="desc">Desc</option>
+      </select>
+    </th>
 
+    <th>
+      Team
+      <select class="sort-dd" data-key="team">
+        <option value="none">—</option>
+        <option value="asc">A→Z</option>
+        <option value="desc">Z→A</option>
+      </select>
+    </th>
 
+    <th style="width:140px;">
+      Record
+      <select class="sort-dd" data-key="record">
+        <option value="none">—</option>
+        <option value="asc">Low→High</option>
+        <option value="desc">High→Low</option>
+      </select>
+    </th>
+
+    <th style="width:110px;">
+      PF
+      <select class="sort-dd" data-key="points_for">
+        <option value="none">—</option>
+        <option value="asc">Low→High</option>
+        <option value="desc">High→Low</option>
+      </select>
+    </th>
+
+    <th style="width:110px;">
+      PA
+      <select class="sort-dd" data-key="points_against">
+        <option value="none">—</option>
+        <option value="asc">Low→High</option>
+        <option value="desc">High→Low</option>
+      </select>
+    </th>
+
+    <th style="width:170px; text-align:center;">
+      Championships
+      <select class="sort-dd" data-key="Championships">
+        <option value="none">—</option>
+        <option value="asc">Low→High</option>
+        <option value="desc">High→Low</option>
+      </select>
+    </th>
   </tr>
 </thead>
-
+        
         <tbody id="standingsBody"></tbody>
       </table>
     </section>
