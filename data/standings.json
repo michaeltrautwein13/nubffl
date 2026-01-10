@@ -1,17 +1,17 @@
 {
   "last_updated": "2026-01-12",
   "teams": [
-    { "team": "Jamie Taco's Henchmen", "record": "33-23", "points_for": 7012.94, "points_against": 6689.92 },
-    { "team": "Doogs Doogs", "record": "30-26", "points_for": 6751.44, "points_against": 6547.44 },
-    { "team": "Bones Bones", "record": "27-29", "points_for": 6844.32, "points_against": 6454.02 },
-    { "team": "Deeuhh Leee", "record": "21-35", "points_for": 6098.96, "points_against": 6477.38 },
-    { "team": "MULCYBUSHEATER24", "record": "19-37", "points_for": 5822.36, "points_against": 6369.42 },
-    { "team": "North Macedonia Yoseps", "record": "30-26", "points_for": 6862.88, "points_against": 6670.5 },
-    { "team": "Cheddar Mankus Rack", "record": "33-23", "points_for": 7154.62, "points_against": 6499.64 },
-    { "team": "Boodrey", "record": "18-10", "points_for": 3388.44, "points_against": 3241.32 },
-    { "team": "Jaes Bussy", "record": "21-35", "points_for": 6102.4, "points_against": 6748.36 },
-    { "team": "Hernandez Hitmen", "record": "13-15", "points_for": 3197.32, "points_against": 3345.32 },
-    { "team": "Biancheese", "record": "37-19", "points_for": 6785.9, "points_against": 6410.42 },
-    { "team": "O Block Foenem", "record": "26-30", "points_for": 6020.84, "points_against": 6588.68 }
+    { "team": "Jamie Taco's Henchmen", "record": "33-23", "points_for": 7012.94, "points_against": 6689.92, "Championships": 1 },
+    { "team": "Doogs Doogs", "record": "30-26", "points_for": 6751.44, "points_against": 6547.44, "Championships": 1 },
+    { "team": "Bones Bones", "record": "27-29", "points_for": 6844.32, "points_against": 6454.02, "Championships": 0 },
+    { "team": "Deeuhh Leee", "record": "21-35", "points_for": 6098.96, "points_against": 6477.38, "Championships": 0},
+    { "team": "MULCYBUSHEATER24", "record": "19-37", "points_for": 5822.36, "points_against": 6369.42, "Championships": 0 },
+    { "team": "North Macedonia Yoseps", "record": "30-26", "points_for": 6862.88, "points_against": 6670.5, "Championships": 0 },
+    { "team": "Cheddar Mankus Rack", "record": "33-23", "points_for": 7154.62, "points_against": 6499.64, "Championships": 0 },
+    { "team": "Boodrey", "record": "18-10", "points_for": 3388.44, "points_against": 3241.32, "Championships": 1 },
+    { "team": "Jaes Bussy", "record": "21-35", "points_for": 6102.4, "points_against": 6748.36, "Championships": 0 },
+    { "team": "Hernandez Hitmen", "record": "13-15", "points_for": 3197.32, "points_against": 3345.32, "Championships": 0 },
+    { "team": "Biancheese", "record": "37-19", "points_for": 6785.9, "points_against": 6410.42, "Championships": 1 },
+    { "team": "O Block Foenem", "record": "26-30", "points_for": 6020.84, "points_against": 6588.68, "Championships": 0 }
   ]
 }
