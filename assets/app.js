@@ -295,7 +295,6 @@ async function renderHomepageChampion(){
 window.addEventListener("DOMContentLoaded", async ()=>{
   setActiveNav();
   const page = document.body.getAttribute("data-page");
-
   try{
     if(page === "index") await renderHomepageChampion();
     if(page === "power") await renderPower();
@@ -311,6 +310,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     }
   }
 });
+
 
 async function renderHomepageChampion(){
   const h = await loadJSON("data/history.json");
